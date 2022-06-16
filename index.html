@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sehirler.js"></script>
+</head>
+<body>
+
+<h1>İLLERİ BÖLGELERE GÖRE SIRALAMA UYGULAMASI</h1>
+<select id="selectid">
+    <option value="Karadeniz">Karadeniz</option>
+    <option value="Ege">Ege</option>
+    <option value="Marmara">Marmara</option>
+    <option value="İç Anadolu">İç Anadolu</option>
+</select>
+
+<button onclick="sirala()">Bölgeye göre sırala</button>
+<button onclick="tumiller()">Tüm İller</button>
+<div id="container"></div>
+</body>
+
+
+
+<script>
+
+
+for ( let i =0;i<sehirler.length;i++) {
+
+const newp = document.createElement("p");
+document.getElementById("container").appendChild(newp);
+newp.innerHTML = sehirler[i].isim ;
+
+}
+
+
+/*
+
+BÖLGEYE GÖRE ŞEHİRLERİ SIRALA 
+
+*/
+
+
+function sirala() {
+
+const gelendeger = document.getElementById("selectid").value;
+
+const filteredsehirler = sehirler.filter((sehir) => sehir.bolge == gelendeger ) 
+
+document.getElementById("container").innerHTML = " " ;
+
+for ( let i =0;i<filteredsehirler.length;i++) {
+
+const newp = document.createElement("p");
+document.getElementById("container").appendChild(newp);
+newp.innerHTML = filteredsehirler[i].isim ;;
+
+}
+
+}
+
+function tumiller () {
+
+document.getElementById("container").innerHTML = " " ;
+
+for ( let i =0;i<sehirler.length;i++) {
+
+const newp = document.createElement("p");
+document.getElementById("container").appendChild(newp);
+newp.innerHTML = sehirler[i].isim ;
+
+}
+
+}
+
+
+</script>
+</html>

@@ -1,0 +1,49 @@
+body {
+    margin: auto;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+button {
+    cursor:pointer;
+}
+
+h1 {
+
+    font-size: 30px;
+
+}
+
+#container {
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content:baseline;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:5px;
+    width:fit-content;
+  
+}
+
+p {
+    margin: auto;
+    display: block;
+    line-height:50px;
+    height:50px;
+    width:100px;
+    background-color: darkred;
+    color: white;
+    
+}
+
+button, select {
+    height: 50px;
+    width: 200px;
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+}
